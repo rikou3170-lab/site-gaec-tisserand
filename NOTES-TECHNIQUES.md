@@ -65,7 +65,7 @@ node render.js            # crée les JPEG 300 dpi et les PDF
 
 ## Données de référence
 
-- **Degrés** (confirmés par le frère d'Eric, nov. 2026) : Kirsch 50 % ; Mirabelle et Poire Williams 48 % ; Prune Dama 48 % (proposé, à confirmer) ; liqueurs Cœur 17 % ; Perle Noire et Mûr'abelle 18 % ; Schrik 18 % ; cerises au kirsch 15 %.
+- **Degrés** (confirmés par Eric et son frère, nov. 2026) : Kirsch 50 % ; Mirabelle et Poire Williams 48 % ; Prune Dama 48 % ; liqueurs Cœur 17 % ; Perle Noire et Mûr'abelle 18 % ; Schrik 18 % ; cerises au kirsch 15 %.
   ⚠️ La liste de départ dans le code de l'application de facturation indique 45 % pour les eaux-de-vie : ne pas s'y fier.
 - **Mentions légales** : GAEC Tisserand, 78 Blanzey, 70220 Fougerolles-Saint-Valbert ; capital 84 150 € ; SIREN 389 031 949 ; SIRET 389 031 949 00024 ; TVA FR07389031949 ; directeur de la publication : Damien Tisserand ; hébergeur : GitHub Inc.
 
