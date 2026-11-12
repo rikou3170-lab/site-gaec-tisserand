@@ -1,0 +1,6 @@
+const {chromium}=require('playwright');(async()=>{const b=await chromium.launch();const p=await b.newPage({viewport:{width:390,height:844}});
+await p.goto('file:///home/claude/final/index.html');await p.evaluate(()=>{sessionStorage.setItem('majeur','1');localStorage.setItem('langue','fr')});await p.reload();await p.waitForTimeout(900);
+await p.evaluate(()=>{const e=document.getElementById('ageYes');if(e){e.checked=true;e.dispatchEvent(new Event('change',{bubbles:true}))}});
+const info=await p.evaluate(()=>{const r={};for(const s of ['html','body','#site-scroll','main']){const e=document.querySelector(s);const c=getComputedStyle(e);r[s]=[e.scrollHeight,e.clientHeight,c.overflowY,c.position]}return r});console.log(JSON.stringify(info));
+let i=0;for(const sel of ['.welcome-ribbon','.spirits','.story','.visit','footer']){const y=await p.evaluate(s=>{const e=document.querySelector(s);const sc=[document.scrollingElement,document.getElementById('site-scroll'),document.body].find(x=>x.scrollHeight>x.clientHeight+50);const r=e.getBoundingClientRect();sc.scrollTop+=r.top-140;return sc.tagName+sc.id},sel);await p.waitForTimeout(600);await p.screenshot({path:`/tmp/s-${i++}.png`});}
+await b.close()})();

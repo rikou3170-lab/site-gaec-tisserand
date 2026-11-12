@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>Producteur local – Ferme Tisserand</title>
+<style>
+@font-face{font-family:"Abril";src:url(/tmp/fnt/node_modules/@fontsource/abril-fatface/files/abril-fatface-latin-400-normal.woff2)}
+@font-face{font-family:"Bebas";src:url(/tmp/fnt/node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-style:italic;font-weight:600;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-600-italic.woff2)}
+@font-face{font-family:"Gelasio";font-style:italic;font-weight:400;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-400-italic.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-400-normal.woff2)}
+@font-face{font-family:"Arimo";font-weight:400;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-400-normal.woff2)}
+@font-face{font-family:"Arimo";font-weight:700;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-700-normal.woff2)}
+@page{size:__W__mm __H__mm;margin:0}
+:root{--u:__U__mm;--green:#2f5a2e;--green2:#3f7a3a;--cherry:#5a1220;--cream:#fbf3e3;--kraft:#ead9bb;--honey:#e7b45a;--ink:#2a1a14}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:__W__mm;height:__H__mm;overflow:hidden}
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-family:Arimo,sans-serif;background:var(--kraft);color:var(--ink)}
+.p{position:relative;width:100%;height:100%;overflow:hidden;background:var(--kraft)}
+.top{position:absolute;left:0;right:0;top:0;height:calc(var(--u)*50);background:var(--green);color:var(--cream);text-align:center;padding-top:calc(var(--u)*8)}
+.top small{display:block;font:700 calc(var(--u)*3)/1 Arimo;letter-spacing:.34em;color:var(--honey)}
+.top h1{font:400 calc(var(--u)*19)/1 Bebas;letter-spacing:.04em;margin-top:calc(var(--u)*2.5)}
+.top::after{content:"";position:absolute;left:0;right:0;bottom:calc(var(--u)*-3);height:calc(var(--u)*3.2);background:radial-gradient(circle at 50% 0,var(--green) calc(var(--u)*3),transparent calc(var(--u)*3.1)) 0 0/calc(var(--u)*6) 100% repeat-x}
+.card{position:absolute;left:calc(var(--u)*14);top:calc(var(--u)*64);width:calc(var(--u)*112);height:calc(var(--u)*112);background:#fff;padding:calc(var(--u)*4) calc(var(--u)*4) calc(var(--u)*14);transform:rotate(-3deg);box-shadow:0 calc(var(--u)*1) 0 rgba(0,0,0,.12)}
+.card .ph{width:100%;height:100%;background:url(img/grenier_card.jpg) 40% 60%/cover}
+.card p{position:absolute;left:0;right:0;bottom:calc(var(--u)*4);text-align:center;font:italic 400 calc(var(--u)*4.4)/1 Gelasio,serif;color:var(--ink)}
+.tape{position:absolute;width:calc(var(--u)*26);height:calc(var(--u)*7);background:rgba(231,180,90,.75);top:calc(var(--u)*-3);left:calc(var(--u)*43);transform:rotate(4deg)}
+.who{position:absolute;right:calc(var(--u)*12);top:calc(var(--u)*66);width:calc(var(--u)*66)}
+.who .name{font:italic 600 calc(var(--u)*6)/1 Gelasio,serif;color:var(--cherry)}
+.who h2{font:400 calc(var(--u)*15)/.9 Abril;color:var(--cherry);margin:calc(var(--u)*1) 0 calc(var(--u)*3)}
+.who .place{font:700 calc(var(--u)*2.8)/1.5 Arimo;letter-spacing:.14em;color:var(--green)}
+.facts{list-style:none;margin-top:calc(var(--u)*4);border-top:calc(var(--u)*.4) solid var(--green)}
+.facts li{padding:calc(var(--u)*2.2) 0;border-bottom:calc(var(--u)*.25) dashed rgba(47,90,46,.45);font:400 calc(var(--u)*3.3)/1.25 Arimo}
+.facts b{display:block;font:400 calc(var(--u)*7)/1 Bebas;letter-spacing:.03em;color:var(--green)}
+.quote{position:absolute;left:calc(var(--u)*14);right:calc(var(--u)*76);top:calc(var(--u)*184);text-align:left;font:italic 400 calc(var(--u)*5.6)/1.25 Gelasio,serif;color:var(--cherry)}
+.quote::before{content:"“";display:block;font:400 calc(var(--u)*18)/.5 Abril;color:var(--honey);margin-bottom:calc(var(--u)*1.5)}
+.quote small{display:block;margin-top:calc(var(--u)*2);font:700 calc(var(--u)*2.6)/1 Arimo;letter-spacing:.2em;color:var(--green)}
+.bottom{position:absolute;left:0;right:0;bottom:0;height:calc(var(--u)*64);background:var(--cherry);color:var(--cream);padding:calc(var(--u)*8) calc(var(--u)*12) 0;display:grid;grid-template-columns:1fr calc(var(--u)*56);gap:calc(var(--u)*6)}
+.bottom h3{font:400 calc(var(--u)*7)/1 Bebas;letter-spacing:.06em;color:var(--honey);margin-bottom:calc(var(--u)*2)}
+.bottom ul{list-style:none}
+.bottom li{display:flex;justify-content:space-between;font:400 calc(var(--u)*3.2)/1 Gelasio,serif;padding:calc(var(--u)*1.25) 0;border-bottom:calc(var(--u)*.25) solid rgba(251,243,227,.22)}
+.bottom li span{font:400 calc(var(--u)*2.6)/1 Arimo;color:rgba(251,243,227,.75)}
+.qr{position:absolute;right:calc(var(--u)*12);bottom:calc(var(--u)*17);width:calc(var(--u)*56);text-align:center}
+.qr .box{background:var(--cream);border:calc(var(--u)*1.8) solid var(--honey);border-radius:calc(var(--u)*4);padding:calc(var(--u)*3.4)}
+.qr .box svg{width:100%;height:auto;display:block}
+.qr .lbl{position:absolute;left:50%;top:calc(var(--u)*-6.5);transform:translateX(-50%) rotate(-3deg);background:var(--honey);color:var(--cherry);font:400 calc(var(--u)*6)/1 Bebas;letter-spacing:.06em;padding:calc(var(--u)*1.6) calc(var(--u)*4) calc(var(--u)*1);white-space:nowrap;border-radius:calc(var(--u)*1)}
+.qr .flags{display:flex;justify-content:center;gap:calc(var(--u)*2);margin-top:calc(var(--u)*2.4)}
+.qr .flags svg{width:calc(var(--u)*7.5);height:calc(var(--u)*5);border-radius:calc(var(--u)*.5)}
+.foot{position:absolute;left:calc(var(--u)*12);right:calc(var(--u)*12);bottom:calc(var(--u)*5);display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*4)}
+.addr{font:400 calc(var(--u)*2.6)/1.3 Arimo;color:var(--cream)}
+.addr b{color:var(--honey)}
+.health{background:var(--cream);color:var(--ink);font:700 calc(var(--u)*2.6)/1.25 Arimo;padding:calc(var(--u)*1.8) calc(var(--u)*2.4);border-radius:calc(var(--u)*.8);text-align:center;max-width:calc(var(--u)*92)}
+</style></head><body><div class="p">
+<div class="top"><small>VOTRE PRODUCTEUR LOCAL</small><h1>Fait ici, en Haute-Saône</h1></div>
+<div class="card"><div class="tape"></div><div class="ph"></div><p>Le grenier de la ferme, daté de 1746</p></div>
+<div class="who">
+  <div class="name">La ferme</div><h2>Tisserand</h2>
+  <div class="place">BLANZEY · FOUGEROLLES (70)</div>
+  <ul class="facts">
+    <li><b>AOC</b>Kirsch de Fougerolles</li>
+    <li><b>Distillé à la ferme</b>Nos fruits, notre alambic</li>
+    <li><b>Vente directe</b>À la ferme, 7 jours sur 7</li>
+  </ul>
+</div>
+<div class="quote">Pour être un bon distillateur, il faut d’abord être un bon dégustateur.<small>LA FAMILLE TISSERAND</small></div>
+<div class="bottom"><div>
+  <h3>Dans ce rayon</h3>
+  <ul>
+    <li>Kirsch de Fougerolles AOC<span>45 % vol.</span></li>
+    <li>Mirabelle · Poire Williams · Prune Dama<span>45 % vol.</span></li>
+    <li>Cœur de Cerise, Mirabelle, Poire<span>17 % vol.</span></li>
+    <li>La Perle Noire · La Mûr’abelle<span>18 % vol.</span></li>
+  </ul></div><div></div></div>
+<div class="qr"><div class="lbl">Scannez-moi !</div><div class="box">__QR__</div><div class="flags">__FLAGS__</div></div>
+<div class="foot"><div class="addr"><b>La ferme Tisserand</b><br>78 Blanzey, 70220 Fougerolles-Saint-Valbert · 03 84 49 10 17</div><div class="health">L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</div></div>
+</div></body></html>

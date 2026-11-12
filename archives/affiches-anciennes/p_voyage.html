@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr"><head><meta charset="utf-8"><title>Affiche voyage – Ferme Tisserand</title>
+<style>
+@font-face{font-family:"Bebas";src:url(/tmp/fnt/node_modules/@fontsource/bebas-neue/files/bebas-neue-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-style:italic;font-weight:600;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-600-italic.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-400-normal.woff2)}
+@font-face{font-family:"Arimo";font-weight:400;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-400-normal.woff2)}
+@font-face{font-family:"Arimo";font-weight:700;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-700-normal.woff2)}
+@page{size:__W__mm __H__mm;margin:0}
+:root{--u:__U__mm;--navy:#1f2a44;--cherry:#9b1b2c;--cream:#f6ead2;--sun:#f2b544;--ink:#1f1a1a}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:__W__mm;height:__H__mm;overflow:hidden}
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-family:Arimo,sans-serif;background:var(--cream)}
+.p{position:relative;width:100%;height:100%;overflow:hidden}
+.bg{position:absolute;inset:0;width:100%;height:100%}
+.frame{position:absolute;inset:calc(var(--u)*7);border:calc(var(--u)*.8) solid var(--cream);pointer-events:none}
+.t{position:absolute;left:0;right:0;text-align:center}
+.kicker{top:calc(var(--u)*16);font:700 calc(var(--u)*3.4)/1 Arimo;letter-spacing:.42em;color:var(--cream)}
+.big{top:calc(var(--u)*22);font:400 calc(var(--u)*39)/1 Bebas;letter-spacing:.03em;color:var(--cream)}
+.sub{top:calc(var(--u)*61);font:italic 600 calc(var(--u)*7.4)/1 Gelasio,serif;color:var(--sun)}
+.bottom{position:absolute;left:calc(var(--u)*7);right:calc(var(--u)*7);bottom:calc(var(--u)*7);height:calc(var(--u)*80);background:var(--cream);padding:calc(var(--u)*7) calc(var(--u)*9) 0;display:grid;grid-template-columns:1fr calc(var(--u)*50);gap:calc(var(--u)*7)}
+.brand small{display:block;font:italic 600 calc(var(--u)*5.6)/1 Gelasio,serif;color:var(--cherry)}
+.brand b{display:block;font:400 calc(var(--u)*15)/.9 Bebas;letter-spacing:.03em;color:var(--navy)}
+.brand p{margin-top:calc(var(--u)*1.6);font:700 calc(var(--u)*2.7)/1.4 Arimo;letter-spacing:.16em;color:var(--cherry)}
+.brand ul{list-style:none;margin-top:calc(var(--u)*3);border-top:calc(var(--u)*.4) solid var(--navy)}
+.brand li{display:flex;justify-content:space-between;font:400 calc(var(--u)*3.1)/1 Gelasio,serif;color:var(--ink);padding:calc(var(--u)*1.25) 0;border-bottom:calc(var(--u)*.25) solid rgba(31,42,68,.2)}
+.brand li span{font:400 calc(var(--u)*2.5)/1 Arimo;color:#5c5a66}
+.qr{text-align:center;margin-top:calc(var(--u)*-17)}
+.qr .tag{display:inline-block;background:var(--cherry);color:var(--cream);font:400 calc(var(--u)*6.4)/1 Bebas;letter-spacing:.08em;padding:calc(var(--u)*1.8) calc(var(--u)*4) calc(var(--u)*1.2)}
+.qr .box{background:#fff;border:calc(var(--u)*1.2) solid var(--navy);padding:calc(var(--u)*3);margin-top:calc(var(--u)*1.5)}
+.qr .box svg{width:100%;height:auto;display:block}
+.qr .flags{display:flex;justify-content:center;gap:calc(var(--u)*2);margin-top:calc(var(--u)*2.2)}
+.qr .flags svg{width:calc(var(--u)*7.2);height:calc(var(--u)*4.8);border-radius:calc(var(--u)*.4);box-shadow:0 0 0 calc(var(--u)*.25) rgba(31,42,68,.25)}
+.foot{position:absolute;left:calc(var(--u)*16);right:calc(var(--u)*16);bottom:calc(var(--u)*11);display:flex;justify-content:space-between;align-items:center;gap:calc(var(--u)*4)}
+.addr{font:400 calc(var(--u)*2.5)/1.35 Arimo;color:var(--navy)}
+.addr b{color:var(--cherry)}
+.health{border:calc(var(--u)*.35) solid var(--navy);color:var(--navy);font:700 calc(var(--u)*2.5)/1.25 Arimo;padding:calc(var(--u)*1.6) calc(var(--u)*2.2);text-align:center;max-width:calc(var(--u)*90)}
+</style></head><body><div class="p">
+<svg class="bg" viewBox="0 0 210 297" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+ <defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1f2a44"/><stop offset=".45" stop-color="#7a3a52"/><stop offset=".75" stop-color="#e98a5a"/><stop offset="1" stop-color="#f6c77a"/></linearGradient>
+  <g id="cb"><rect x="-.7" y="0" width="1.4" height="6" fill="#3a2418"/><circle cx="0" cy="-2.5" r="5" fill="#fbeff0"/><circle cx="-3.6" cy="-.4" r="3.4" fill="#f6dfe3"/><circle cx="3.7" cy="-.6" r="3.5" fill="#fff6f6"/><circle cx="-1.2" cy="-6" r="3" fill="#ffffff"/></g>
+ </defs>
+ <rect width="210" height="297" fill="url(#sky)"/>
+ <!-- soleil rayonnant -->
+ <g transform="translate(105 150)" opacity=".9">
+  <g fill="#f6c77a" opacity=".22">__RAYS__</g>
+  <circle r="26" fill="#f2b544"/>
+ </g>
+ <!-- ballons des Vosges -->
+ <path d="M0 152 C14 140 26 134 40 136 C54 138 60 148 74 147 C88 146 96 130 112 129 C128 128 136 142 150 141 C164 140 172 131 186 131 C198 131 205 136 210 138 L210 210 L0 210Z" fill="#4b3a6b"/>
+ <path d="M0 166 C16 156 30 152 46 155 C62 158 70 165 86 163 C102 161 110 152 126 152 C142 152 150 162 166 161 C182 160 194 154 210 155 L210 220 L0 220Z" fill="#35548a"/>
+ <!-- collines vertes -->
+ <path d="M0 180 C28 170 54 176 82 172 C110 168 138 178 168 173 C186 170 200 171 210 172 L210 240 L0 240Z" fill="#5c8a43"/>
+ <path d="M0 194 C30 186 60 192 92 188 C124 184 156 194 210 186 L210 297 L0 297Z" fill="#46703a"/>
+ <!-- ferme -->
+ <g transform="translate(150 179)"><path d="M-8 0V-5.5L0-10 8-5.5V0Z" fill="#f6ead2"/><path d="M-9.5-5L0-11 9.5-5 8.6-4.3 0-9.7-8.6-4.3Z" fill="#9b1b2c"/><rect x="-5.6" y="-4" width="2" height="2" fill="#1f2a44"/><rect x="-1.8" y="-4" width="2" height="2" fill="#1f2a44"/><path d="M2.6 0V-3.2A1.6 1.6 0 0 1 5.8-3.2V0Z" fill="#1f2a44"/></g>
+ <!-- vergers en fleurs -->
+ <use href="#cb" transform="translate(16 184) scale(.7)"/><use href="#cb" transform="translate(36 182) scale(.66)"/><use href="#cb" transform="translate(58 180) scale(.7)"/><use href="#cb" transform="translate(80 179) scale(.64)"/><use href="#cb" transform="translate(104 178) scale(.68)"/><use href="#cb" transform="translate(126 181) scale(.66)"/><use href="#cb" transform="translate(176 179) scale(.66)"/><use href="#cb" transform="translate(196 178) scale(.7)"/>
+ <use href="#cb" transform="translate(10 200) scale(1.05)"/><use href="#cb" transform="translate(40 198) scale(1)"/><use href="#cb" transform="translate(72 197) scale(1.08)"/><use href="#cb" transform="translate(106 196) scale(1)"/><use href="#cb" transform="translate(140 198) scale(1.05)"/><use href="#cb" transform="translate(174 195) scale(1)"/><use href="#cb" transform="translate(204 194) scale(1.05)"/>
+</svg>
+<div class="frame"></div>
+<div class="t kicker">HAUTE-SAÔNE · AU PIED DES VOSGES</div>
+<div class="t big">FOUGEROLLES</div>
+<div class="t sub">le pays du kirsch</div>
+<div class="bottom">
+ <div class="brand"><small>La ferme</small><b>TISSERAND</b><p>KIRSCH DE FOUGEROLLES AOC · DISTILLÉ À LA FERME</p>
+  <ul>
+   <li>Kirsch de Fougerolles AOC<span>45 % vol.</span></li>
+   <li>Mirabelle · Poire Williams · Prune Dama<span>45 % vol.</span></li>
+   <li>Cœur de Cerise, Mirabelle, Poire<span>17 % vol.</span></li>
+   <li>La Perle Noire · La Mûr’abelle<span>18 % vol.</span></li>
+  </ul></div>
+ <div class="qr"><div class="tag">Scannez-moi !</div><div class="box">__QR__</div><div class="flags">__FLAGS__</div></div>
+</div>
+<div class="foot"><div class="addr"><b>Vente directe à la ferme, 7 j/7</b><br>78 Blanzey, 70220 Fougerolles-Saint-Valbert · 03 84 49 10 17</div><div class="health">L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</div></div>
+</div></body></html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Affiche Kirsch – Ferme Tisserand</title>
+<style>
+@font-face{font-family:"Abril";src:url(/tmp/fnt/node_modules/@fontsource/abril-fatface/files/abril-fatface-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:normal;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:italic;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-400-italic.woff2)}
+@font-face{font-family:"Gelasio";font-weight:600;font-style:italic;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-600-italic.woff2)}
+@font-face{font-family:"Arimo";font-weight:400;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-400-normal.woff2)}
+@font-face{font-family:"Arimo";font-weight:700;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-700-normal.woff2)}
+@page{size:__W__mm __H__mm;margin:0}
+:root{--u:__U__mm;--cherry:#5a1220;--cherry2:#7a1d2c;--cream:#fbf0dc;--honey:#e7b45a;--ink:#2e1418}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:__W__mm;height:__H__mm;overflow:hidden;background:var(--cream)}
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-family:Arimo,sans-serif}
+.poster{position:relative;width:100%;height:100%;overflow:hidden}
+.bg{position:absolute;inset:0;width:100%;height:100%}
+.t{position:absolute;left:0;right:0}
+.brand{top:calc(var(--u)*11);text-align:center;font:700 calc(var(--u)*3)/1 Arimo;letter-spacing:.32em;color:var(--cherry)}
+.kirsch{top:calc(var(--u)*20);text-align:center;font-family:Abril,serif;font-size:calc(var(--u)*50);line-height:1;color:var(--cherry);letter-spacing:-.01em}
+.denom{top:calc(var(--u)*74);text-align:center;font:italic 600 calc(var(--u)*10)/1 Gelasio,serif;color:var(--cherry)}
+.denom span{display:inline-block;margin-left:calc(var(--u)*3);font:700 calc(var(--u)*3.6)/1 Arimo;letter-spacing:.2em;vertical-align:middle;border:calc(var(--u)*.5) solid var(--cherry);padding:calc(var(--u)*1.4) calc(var(--u)*2.2) calc(var(--u)*1.2);border-radius:calc(var(--u)*1)}
+.sub{top:calc(var(--u)*88);text-align:center;font:400 calc(var(--u)*5)/1.25 Gelasio,serif;color:var(--ink)}
+.badge{position:absolute;top:calc(var(--u)*97);right:calc(var(--u)*13);width:calc(var(--u)*31);height:calc(var(--u)*31);border-radius:50%;background:var(--honey);color:var(--cherry);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(12deg);box-shadow:0 calc(var(--u)*.8) 0 rgba(90,18,32,.25)}
+.badge::before{content:"";position:absolute;inset:calc(var(--u)*1.4);border-radius:50%;border:calc(var(--u)*.35) dashed rgba(90,18,32,.45)}
+.badge b{font:700 calc(var(--u)*3.1)/1.1 Arimo;letter-spacing:.12em}
+.badge i{font:italic 600 calc(var(--u)*5.2)/1 Gelasio,serif;margin:calc(var(--u)*.8) 0}
+.badge small{font:700 calc(var(--u)*2.6)/1 Arimo;letter-spacing:.1em}
+/* bas */
+.band{position:absolute;left:0;right:0;bottom:0;height:calc(var(--u)*92);padding:calc(var(--u)*15) calc(var(--u)*12) 0;color:var(--cream);display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*8)}
+.range h3{font:italic 400 calc(var(--u)*5.4)/1.1 Gelasio,serif;color:var(--honey);margin-bottom:calc(var(--u)*2);padding-left:calc(var(--u)*18)}
+.range ul{list-style:none}
+.range li{display:flex;justify-content:space-between;gap:calc(var(--u)*3);font:400 calc(var(--u)*3.5)/1 Gelasio,serif;padding:calc(var(--u)*1.45) 0;border-bottom:calc(var(--u)*.25) solid rgba(251,240,220,.25)}
+.range li span{font:400 calc(var(--u)*2.8)/1 Arimo;color:rgba(251,240,220,.75);white-space:nowrap;align-self:center}
+.range li.k{font-size:calc(var(--u)*4.2)}
+.range li.k span{color:var(--honey)}
+.qrbox{display:flex;flex-direction:column;align-items:center;width:calc(var(--u)*46)}
+.seal{position:relative;width:calc(var(--u)*39);height:calc(var(--u)*39);border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center}
+.seal .arc{position:absolute;inset:0}
+.seal .arc text{font:700 4.6px Arimo;letter-spacing:1px;fill:var(--cherry)}
+.seal .qr{width:calc(var(--u)*23);height:calc(var(--u)*23)}
+.seal .qr svg{width:100%;height:100%;display:block}
+.qrbox p{margin-top:calc(var(--u)*2.4);text-align:center;font:400 calc(var(--u)*2.7)/1.35 Arimo;color:rgba(251,240,220,.85)}
+.qrbox p b{display:block;color:var(--cream);font:italic 600 calc(var(--u)*3.8)/1.2 Gelasio,serif;margin-bottom:calc(var(--u)*.6)}
+.foot{position:absolute;left:calc(var(--u)*12);right:calc(var(--u)*12);bottom:calc(var(--u)*8)}
+.addr{margin-top:calc(var(--u)*3.2);font:400 calc(var(--u)*2.8)/1.4 Arimo;color:var(--cream)}
+.addr b{color:var(--honey)}
+.health{background:var(--cream);color:var(--ink);text-align:center;font:700 calc(var(--u)*3)/1.3 Arimo;padding:calc(var(--u)*2.2) calc(var(--u)*3);border-radius:calc(var(--u)*1)}
+</style>
+</head>
+<body>
+<div class="poster">
+<svg class="bg" viewBox="0 0 210 297" preserveAspectRatio="none" aria-hidden="true">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fbeed6"/><stop offset=".55" stop-color="#f7d7b0"/><stop offset="1" stop-color="#f0b58e"/>
+    </linearGradient>
+    <radialGradient id="sun" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fff7e6"/><stop offset=".6" stop-color="#ffe9c4" stop-opacity=".9"/><stop offset="1" stop-color="#ffe0b0" stop-opacity="0"/></radialGradient>
+    <g id="tree">
+      <rect x="-.9" y="0" width="1.8" height="7" rx=".6" fill="#4d3424"/>
+      <circle cx="0" cy="-3" r="6.2" fill="#fff4f2"/>
+      <circle cx="-4.3" cy="-.6" r="4" fill="#ffeef0"/>
+      <circle cx="4.4" cy="-.9" r="4.2" fill="#fff7f5"/>
+      <circle cx="-1.8" cy="-7" r="3.6" fill="#ffffff"/>
+      <circle cx="2.6" cy="-6.4" r="3.3" fill="#fde6ea"/>
+      <g fill="#e89aa8"><circle cx="-2.4" cy="-3.6" r=".55"/><circle cx="2.2" cy="-2.2" r=".55"/><circle cx="-4.6" cy="0" r=".5"/><circle cx="4.8" cy="-.4" r=".5"/><circle cx=".4" cy="-7.4" r=".5"/><circle cx="-1" cy=".8" r=".45"/></g>
+    </g>
+    <g id="treeR">
+      <rect x="-.9" y="0" width="1.8" height="7" rx=".6" fill="#4d3424"/>
+      <circle cx="0" cy="-3" r="6.2" fill="#4f7a37"/>
+      <circle cx="-4.3" cy="-.6" r="4" fill="#5a8740"/>
+      <circle cx="4.4" cy="-.9" r="4.2" fill="#46702f"/>
+      <circle cx="-1.6" cy="-7" r="3.6" fill="#62913f"/>
+      <g fill="#b81d2e"><circle cx="-2.6" cy="-3.2" r=".85"/><circle cx="2.4" cy="-1.8" r=".85"/><circle cx="-4.4" cy=".4" r=".8"/><circle cx="4.6" cy="0" r=".8"/><circle cx="0" cy="-6.6" r=".8"/><circle cx="1.6" cy="-4.8" r=".75"/><circle cx="-1.4" cy="1" r=".75"/></g>
+    </g>
+  </defs>
+  <rect width="210" height="297" fill="url(#sky)"/>
+  <circle cx="160" cy="128" r="30" fill="url(#sun)"/>
+  <!-- Vosges -->
+  <path d="M0 132 C18 122 34 126 52 118 C70 110 86 122 104 116 C124 109 140 120 160 114 C178 108 194 118 210 112 L210 170 L0 170Z" fill="#c9a8b8"/>
+  <path d="M0 145 C22 136 40 142 62 134 C84 126 100 140 124 133 C146 127 168 138 188 131 C198 128 205 130 210 129 L210 180 L0 180Z" fill="#a98aa6"/>
+  <!-- collines -->
+  <path d="M0 158 C30 148 58 156 90 150 C122 144 150 156 180 150 C192 148 202 148 210 147 L210 200 L0 200Z" fill="#a9bd74"/>
+  <path d="M0 172 C26 164 52 170 80 166 C112 161 140 172 172 166 C188 163 200 164 210 162 L210 215 L0 215Z" fill="#8eaa5a"/>
+  <!-- ferme -->
+  <g transform="translate(150 151)">
+    <path d="M-9 0 L-9 -6 L0 -11 L9 -6 L9 0Z" fill="#f4e6cf"/>
+    <path d="M-10.5 -5.4 L0 -12 L10.5 -5.4 L9.5 -4.6 L0 -10.6 L-9.5 -4.6Z" fill="#7a3a2c"/>
+    <rect x="3.5" y="-15" width="1.8" height="4" fill="#7a3a2c"/>
+    <rect x="-6.5" y="-4.6" width="2.4" height="2.4" fill="#5a3a2a"/><rect x="-2.2" y="-4.6" width="2.4" height="2.4" fill="#5a3a2a"/>
+    <path d="M3 0 L3 -3.6 A1.8 1.8 0 0 1 6.6 -3.6 L6.6 0Z" fill="#5a3a2a"/>
+  </g>
+  <!-- vergers en fleurs, plans successifs -->
+  <g transform="translate(0 0)">
+    <use href="#tree" transform="translate(14 158) scale(.55)"/><use href="#tree" transform="translate(30 156) scale(.5)"/><use href="#tree" transform="translate(48 154) scale(.52)"/><use href="#tree" transform="translate(66 153) scale(.48)"/><use href="#tree" transform="translate(116 151) scale(.5)"/><use href="#tree" transform="translate(132 153) scale(.46)"/><use href="#tree" transform="translate(176 151) scale(.5)"/><use href="#tree" transform="translate(194 150) scale(.48)"/>
+    <use href="#tree" transform="translate(8 172) scale(.8)"/><use href="#tree" transform="translate(32 170) scale(.78)"/><use href="#tree" transform="translate(58 168) scale(.8)"/><use href="#tree" transform="translate(86 168) scale(.76)"/><use href="#tree" transform="translate(112 170) scale(.8)"/><use href="#tree" transform="translate(140 169) scale(.78)"/><use href="#tree" transform="translate(168 167) scale(.8)"/><use href="#tree" transform="translate(196 166) scale(.78)"/>
+  </g>
+  <path d="M0 190 C30 182 64 188 98 183 C134 178 168 188 210 180 L210 230 L0 230Z" fill="#6f8f45"/>
+  <use href="#treeR" transform="translate(20 186) scale(1.25)"/><use href="#tree" transform="translate(52 184) scale(1.2)"/><use href="#treeR" transform="translate(88 182) scale(1.3)"/><use href="#tree" transform="translate(124 181) scale(1.22)"/><use href="#treeR" transform="translate(160 182) scale(1.28)"/><use href="#tree" transform="translate(192 179) scale(1.2)"/>
+  <!-- bande cerise ondulée -->
+  <path d="M0 212 C28 200 58 214 96 205 C132 196 168 210 210 199 L210 297 L0 297Z" fill="#5a1220"/>
+  <path d="M0 212 C28 200 58 214 96 205 C132 196 168 210 210 199" fill="none" stroke="#e7b45a" stroke-width=".7"/>
+  <!-- cerises géantes -->
+  <g transform="translate(30 207) rotate(-10) scale(.9)">
+    <path d="M0 -18 C-2 -8 -8 -2 -10 6" fill="none" stroke="#3f5a26" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M0 -18 C3 -8 7 -1 8 5" fill="none" stroke="#3f5a26" stroke-width="1.3" stroke-linecap="round"/>
+    <path d="M0 -18 C5 -24 13 -24 17 -19 C12 -16 6 -15 0 -18Z" fill="#5f8a3a"/>
+    <circle cx="-10" cy="11" r="7.5" fill="#b0182c"/><circle cx="-12.5" cy="8.5" r="2" fill="#e85a6a" opacity=".7"/>
+    <circle cx="8" cy="10" r="7.5" fill="#c21f33"/><circle cx="5.5" cy="7.5" r="2" fill="#f07080" opacity=".7"/>
+  </g>
+</svg>
+
+<div class="t brand">FERME TISSERAND · BLANZEY · FOUGEROLLES</div>
+<div class="t kirsch">Kirsch</div>
+<div class="t denom">de Fougerolles<span>AOC</span></div>
+<div class="t sub">Distillé à la ferme, à Blanzey.</div>
+<div class="badge"><b>VENTE</b><b>DIRECTE</b><i>à la ferme</i><small>7 JOURS / 7</small></div>
+
+<div class="band">
+  <div class="range">
+    <h3>Distillés à la ferme</h3>
+    <ul>
+      <li class="k">Kirsch de Fougerolles AOC<span>50 % vol.</span></li>
+      <li>Mirabelle · Poire Williams<span>48 % vol.</span></li>
+      <li>Prune Dama<span>45 % vol.</span></li>
+      <li>Liqueurs Cœur de Cerise, Mirabelle, Poire<span>17 % vol.</span></li>
+      <li>Apéritif La Perle Noire<span>18 % vol.</span></li>
+    </ul>
+    <div class="addr"><b>GAEC Tisserand</b> · 78 Blanzey, 70220 Fougerolles-Saint-Valbert · 03 84 49 10 17</div>
+  </div>
+  <div class="qrbox">
+    <div class="seal">
+      <svg class="arc" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="c" d="M50,50 m-42,0 a42,42 0 1,1 84,0 a42,42 0 1,1 -84,0"/></defs><text><textPath href="#c" startOffset="1%">SCANNEZ · DÉCOUVREZ LA FERME · SCANNEZ · DÉCOUVREZ LA FERME ·</textPath></text></svg>
+      <div class="qr">__QR__</div>
+    </div>
+    <p><b>Toute la ferme en un scan</b>FR · EN · DE</p>
+  </div>
+</div>
+<div class="foot">
+  <div class="health">L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</div>
+</div>
+</div>
+</body>
+</html>

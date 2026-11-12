@@ -10,7 +10,7 @@ Notes à lire avant toute modification. Dernière mise à jour : 12 novembre 202
 
 ## Règles à ne pas enfreindre
 
-1. **Ce dépôt est la seule source de vérité.** Rien d'important ne doit rester uniquement dans un espace de travail Claude. À chaque version : commit + push.
+1. **Ce dépôt est la seule source de vérité.** L'espace de travail et la mémoire de Claude peuvent être effacés à tout moment (c'est arrivé sur le projet de Marion). Rien d'important ne doit y rester seul. À chaque version : commit + push, et une ligne dans `NOTES-DE-VERSION.md`.
 2. **Ne jamais retoucher un fichier généré à la main.** Les PDF et JPEG de l'affiche se régénèrent depuis `affiche/affiche.html` (voir plus bas).
 3. **Ne toucher qu'à ce dépôt.** Le compte GitHub héberge aussi les projets de Marion (`epicerie_radonnaise`), `reflecxo` et celui de Gina : ne jamais y toucher depuis ce projet.
 4. **Aucune mise en ligne sans le « Go » d'Eric.** Montrer un aperçu d'abord.
@@ -27,6 +27,8 @@ Notes à lire avant toute modification. Dernière mise à jour : 12 novembre 202
 | `affiche/img/`, `affiche/fonts/` | Photo du verger, logo, polices de l'affiche. |
 | `affiche/qr-gaec-tisserand.svg/.png` | QR code seul, pour l'imprimeur des étiquettes. |
 | `photos-originales/` | Photos sources en pleine définition. |
+| `NOTES-DE-VERSION.md` | Historique des versions. **À compléter à chaque mise en ligne.** |
+| `archives/` | Anciennes maquettes d'affiche, leurs images, et les petits outils (captures d'écran, traduction). |
 
 ## Le site (`index.html`)
 

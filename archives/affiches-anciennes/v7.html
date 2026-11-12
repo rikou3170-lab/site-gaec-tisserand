@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Affiche Kirsch – Ferme Tisserand (photo)</title>
+<style>
+@font-face{font-family:"Abril";src:url(/tmp/fnt/node_modules/@fontsource/abril-fatface/files/abril-fatface-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:normal;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:italic;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-400-italic.woff2)}
+@font-face{font-family:"Gelasio";font-weight:600;font-style:italic;src:url(/tmp/fnt/node_modules/@fontsource/gelasio/files/gelasio-latin-600-italic.woff2)}
+@font-face{font-family:"Arimo";font-weight:400;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-400-normal.woff2)}
+@font-face{font-family:"Arimo";font-weight:700;src:url(/tmp/fnt/node_modules/@fontsource/arimo/files/arimo-latin-700-normal.woff2)}
+@page{size:__W__mm __H__mm;margin:0}
+:root{--u:__U__mm;--cherry:#c4122f;--cherry2:#e0303f;--cream:#fbf0dc;--honey:#e7b45a;--ink:#2e1418}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:__W__mm;height:__H__mm;overflow:hidden;background:var(--cream)}
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-family:Arimo,sans-serif}
+.poster{position:relative;width:100%;height:100%;overflow:hidden}
+.bg{position:absolute;inset:0;width:100%;height:100%}
+.t{position:absolute;left:0;right:0}
+.brand{top:calc(var(--u)*11);text-align:center;font:700 calc(var(--u)*3)/1 Arimo;letter-spacing:.32em;color:#2f6b1e}
+.kirsch small{display:block;font:italic 600 calc(var(--u)*11)/1 Gelasio,serif;margin-bottom:calc(var(--u)*1)}.kirsch{top:calc(var(--u)*19);text-align:center;font-family:Abril,serif;font-size:calc(var(--u)*40);line-height:1;color:var(--cherry);letter-spacing:-.01em}
+.denom{top:calc(var(--u)*72);text-align:center;font:italic 600 calc(var(--u)*8.2)/1 Gelasio,serif;color:var(--cherry)}
+.denom span{display:inline-block;margin-left:calc(var(--u)*3);font:700 calc(var(--u)*3.6)/1 Arimo;letter-spacing:.2em;vertical-align:middle;border:calc(var(--u)*.5) solid var(--cherry);padding:calc(var(--u)*1.4) calc(var(--u)*2.2) calc(var(--u)*1.2);border-radius:calc(var(--u)*1)}
+.sub{top:calc(var(--u)*85);text-align:center;font:400 calc(var(--u)*5)/1.25 Gelasio,serif;color:#2f6b1e}
+.badge{position:absolute;top:calc(var(--u)*97);right:calc(var(--u)*13);width:calc(var(--u)*31);height:calc(var(--u)*31);border-radius:50%;background:var(--honey);color:var(--cherry);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;transform:rotate(12deg)}
+.badge::before{content:"";position:absolute;inset:calc(var(--u)*1.4);border-radius:50%;border:calc(var(--u)*.35) dashed rgba(90,18,32,.45)}
+.badge b{font:700 calc(var(--u)*3.1)/1.1 Arimo;letter-spacing:.12em}
+.badge i{font:italic 600 calc(var(--u)*5.2)/1 Gelasio,serif;margin:calc(var(--u)*.8) 0}
+.badge small{font:700 calc(var(--u)*2.6)/1 Arimo;letter-spacing:.1em}
+/* bas */
+.band{position:absolute;left:0;right:0;bottom:0;height:calc(var(--u)*92);padding:calc(var(--u)*15) calc(var(--u)*12) 0;color:var(--cream);display:grid;grid-template-columns:1fr auto;gap:calc(var(--u)*8)}
+.range h3{font:italic 400 calc(var(--u)*5.4)/1.1 Gelasio,serif;color:var(--honey);margin-bottom:calc(var(--u)*2)}
+.range ul{list-style:none}
+.range li{display:flex;justify-content:space-between;gap:calc(var(--u)*3);font:400 calc(var(--u)*3.5)/1 Gelasio,serif;padding:calc(var(--u)*1.45) 0;border-bottom:calc(var(--u)*.25) solid rgba(251,240,220,.25)}
+.range li span{font:400 calc(var(--u)*2.8)/1 Arimo;color:rgba(251,240,220,.75);white-space:nowrap;align-self:center}
+.range li.k{font-size:calc(var(--u)*4.2)}
+.range li.k span{color:var(--honey)}
+.qrbox{display:flex;flex-direction:column;align-items:center;width:calc(var(--u)*46)}
+.seal{position:relative;width:calc(var(--u)*39);height:calc(var(--u)*39);border-radius:50%;background:var(--cream);display:flex;align-items:center;justify-content:center}
+.seal .arc{position:absolute;inset:0}
+.seal .arc text{font:700 4.6px Arimo;letter-spacing:1px;fill:var(--cherry)}
+.seal .qr{width:calc(var(--u)*23);height:calc(var(--u)*23)}
+.seal .qr svg{width:100%;height:100%;display:block}
+.qrbox p{margin-top:calc(var(--u)*2.4);text-align:center;font:400 calc(var(--u)*2.7)/1.35 Arimo;color:rgba(251,240,220,.85)}
+.qrbox p b{display:block;color:var(--cream);font:italic 600 calc(var(--u)*3.8)/1.2 Gelasio,serif;margin-bottom:calc(var(--u)*.6)}
+.foot{position:absolute;left:calc(var(--u)*12);right:calc(var(--u)*12);bottom:calc(var(--u)*8)}
+.addr{margin-top:calc(var(--u)*3.2);font:400 calc(var(--u)*2.8)/1.4 Arimo;color:var(--cream)}
+.addr b{color:var(--honey)}
+.health{background:var(--cream);color:var(--ink);text-align:center;font:700 calc(var(--u)*3)/1.3 Arimo;padding:calc(var(--u)*2.2) calc(var(--u)*3);border-radius:calc(var(--u)*1)}
+.poster{background:#f7e9d1}.photo{position:absolute;left:0;right:0;top:calc(var(--u)*72);height:calc(var(--u)*160);background:url(img/verger_cerisiers.jpg) center 48%/cover no-repeat}.photo::after{content:"";position:absolute;inset:0;background:linear-gradient(#f7e9d1 0%,rgba(247,233,209,.92) 12%,rgba(247,233,209,.55) 24%,rgba(247,233,209,0) 42%)}.qrbox{position:absolute;right:calc(var(--u)*10);top:calc(var(--u)*163);width:calc(var(--u)*68);display:flex;flex-direction:column;align-items:center;z-index:3}
+.qrbox .seal{width:calc(var(--u)*66);height:calc(var(--u)*66);background:var(--cream);border:calc(var(--u)*2.4) solid var(--honey)}
+.qrbox .seal .qr{width:calc(var(--u)*36);height:calc(var(--u)*36);background:#fff;padding:calc(var(--u)*2);border-radius:calc(var(--u)*1.2)}
+.qrbox .seal .arc text{font:700 5px Arimo;letter-spacing:.7px;fill:var(--cherry)}
+.qrbox p{margin-top:calc(var(--u)*3);text-align:center;font:700 calc(var(--u)*3)/1.3 Arimo;letter-spacing:.14em;color:var(--honey)}
+.qrbox p b{display:block;font:italic 600 calc(var(--u)*7.4)/1.05 Gelasio,serif;letter-spacing:0;color:var(--cream);margin-bottom:calc(var(--u)*1.4)}
+.band{grid-template-columns:1fr calc(var(--u)*66)!important}
+.flags{display:flex;gap:calc(var(--u)*2.4);margin-top:calc(var(--u)*2.2)}.flags svg{width:calc(var(--u)*8.4);height:calc(var(--u)*5.6);border-radius:calc(var(--u)*.5);box-shadow:0 0 0 calc(var(--u)*.3) rgba(251,240,220,.6)}.range li span{color:#fff3d6!important}.health{color:#7a0c1e}</style>
+</head>
+<body>
+<div class="poster">
+<div class="photo"></div>
+<svg class="bg" viewBox="0 0 210 297" preserveAspectRatio="none" aria-hidden="true">
+  <path d="M0 204 C9 196 20 190 33 191 C46 192 52 199 63 198 C75 197 83 186 97 185 C111 184 119 195 131 195 C143 195 151 187 164 186 C177 185 185 194 197 193 C203 192 207 190 210 189 L210 297 L0 297Z" fill="#e0303f"/><path d="M0 214 C8 212 15 204 27 203 C39 202 45 210 57 210 C69 210 77 198 91 197 C105 196 113 207 125 207 C135 207 143 201 153 200 C167 199 173 209 187 208 C197 207 204 203 210 202 L210 297 L0 297Z" fill="#b00f2a"/><path d="M0 214 C8 212 15 204 27 203 C39 202 45 210 57 210 C69 210 77 198 91 197 C105 196 113 207 125 207 C135 207 143 201 153 200 C167 199 173 209 187 208 C197 207 204 203 210 202" fill="none" stroke="#e7b45a" stroke-width=".7"/>
+</svg>
+
+<div class="t brand">PRODUCTEUR À BLANZEY · FOUGEROLLES</div>
+<div class="t kirsch"><small>La ferme</small>Tisserand</div>
+<div class="t denom">Kirsch de Fougerolles<span>AOC</span></div>
+<div class="t sub">Eaux-de-vie et liqueurs distillées à la ferme.</div>
+
+<div class="band">
+  <div class="range">
+    <h3>Distillés à la ferme</h3>
+    <ul>
+      <li class="k">Kirsch de Fougerolles AOC<span>50 % vol.</span></li>
+      <li>Mirabelle · Poire Williams · Prune Dama<span>48 % vol.</span></li>
+      <li>Liqueurs Cœur de Cerise, Mirabelle, Poire<span>17 % vol.</span></li>
+      <li>Apéritif La Perle Noire<span>18 % vol.</span></li>
+      <li>Cocktail La Mûr’abelle<span>18 % vol.</span></li>
+    </ul>
+    <div class="addr"><b>La ferme Tisserand</b> · 78 Blanzey, 70220 Fougerolles-Saint-Valbert · 03 84 49 10 17</div>
+  </div>
+  <div></div>
+</div>
+  <div class="qrbox">
+    <div class="seal">
+      <svg class="arc" viewBox="0 0 100 100" aria-hidden="true"><defs><path id="c2" d="M50,50 m-44.5,0 a44.5,44.5 0 1,1 89,0 a44.5,44.5 0 1,1 -89,0"/></defs><text><textPath href="#c2" startOffset="1%">SCANNEZ AVEC VOTRE TÉLÉPHONE · SCANNEZ AVEC VOTRE TÉLÉPHONE ·</textPath></text></svg>
+      <div class="qr">__QR__</div>
+    </div>
+    <p><b>Scannez-moi !</b>DÉCOUVREZ LA FERME</p><div class="flags" aria-label="Français, English, Deutsch"><svg viewBox="0 0 3 2"><rect width="1" height="2" fill="#0055A4"/><rect x="1" width="1" height="2" fill="#fff"/><rect x="2" width="1" height="2" fill="#EF4135"/></svg><svg viewBox="0 0 60 40"><clipPath id="uk"><rect width="60" height="40"/></clipPath><g clip-path="url(#uk)"><rect width="60" height="40" fill="#012169"/><path d="M0,0 60,40M60,0 0,40" stroke="#fff" stroke-width="8"/><path d="M0,0 60,40M60,0 0,40" stroke="#C8102E" stroke-width="3"/><path d="M30,0V40M0,20H60" stroke="#fff" stroke-width="12"/><path d="M30,0V40M0,20H60" stroke="#C8102E" stroke-width="7"/></g></svg><svg viewBox="0 0 5 3"><rect width="5" height="1" fill="#000"/><rect y="1" width="5" height="1" fill="#DD0000"/><rect y="2" width="5" height="1" fill="#FFCE00"/></svg></div>
+  </div>
+<div class="foot">
+  <div class="health">L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</div>
+</div>
+</div>
+</body>
+</html>
