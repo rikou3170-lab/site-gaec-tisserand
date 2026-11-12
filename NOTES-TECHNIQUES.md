@@ -79,6 +79,12 @@ node render.js            # crée les JPEG 300 dpi et les PDF
 - Interdit : personnes qui boivent, ambiance festive, incitation à consommer.
 - Message sanitaire obligatoire sur le site et sur chaque affiche : « L'abus d'alcool est dangereux pour la santé, à consommer avec modération. »
 
+## Points confirmés par Eric (12 novembre 2026)
+
+- Le kirsch est bien sous AOC.
+- Les degrés du site (50 % et 48 %) correspondent aux bouteilles.
+- L'affichage est validé avec chaque chef de rayon des magasins.
+
 ## Droits des photos
 
 - Verger en fleurs (accueil du site et affiche) : Nicole Geri, Unsplash, licence Unsplash (usage commercial autorisé, crédit non obligatoire). **Ce n'est pas le verger de la ferme** (Michigan) : ne jamais écrire que c'est le leur. À remplacer par une vraie photo dès que possible.
