@@ -32,5 +32,6 @@ La version la plus récente est en haut. Chaque ligne correspond à une mise en 
 
 ## Affiche de rayon
 
+- **Retouche du 12 novembre 2026, 19 h** : mention « Photo d'illustration » ajoutée puis grossie, à droite au-dessus de la vague.
 - **Version actuelle (12 novembre 2026, 17 h 21)** — « Avant la bouteille, il y a le verger de Fougerolles » : verger en pleine page, QR code dans un macaron rouge, « Scannez, découvrez la gamme ! », logo de la ferme, gamme sur deux lignes. Fichiers dans `affiche/`.
 - **Versions précédentes**, conservées dans `archives/affiches-anciennes/` : paysage et bande bordeaux (v3), grenier (v4), hiver (v5), 1746 (v6), verger en rouge (v7), premières maquettes (v2, « producteur local », « pays du kirsch » — écartées). Attention : ces anciennes versions portent encore les degrés à 45 % et la mention « vente directe 7j/7 ». Ne pas les imprimer telles quelles.
