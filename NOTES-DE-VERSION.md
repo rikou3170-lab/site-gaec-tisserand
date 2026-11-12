@@ -4,6 +4,10 @@ La version la plus récente est en haut. Chaque ligne correspond à une mise en 
 
 ## 12 novembre 2026
 
+### Version 3.1 — version affichée et mentions sur la photo (19 h)
+- Numéro de version affiché discrètement tout en bas du site.
+- Mention « Photo d'illustration » sur la photo du verger, sur le site et sur l'affiche, et crédit de la photographe dans les crédits et les mentions légales (la photo n'est pas un verger de Fougerolles).
+
 ### Version 3 — nouveau design (18 h 41)
 - Site redessiné dans l'esprit de l'affiche : verger en fleurs en accueil, titre « Avant la bouteille, il y a le verger de Fougerolles », rouge cerise, vert verger, vagues des ballons entre les sections.
 - Bouton d'accueil « Découvrir la gamme ».

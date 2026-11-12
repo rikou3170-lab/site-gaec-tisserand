@@ -14,6 +14,8 @@ Notes à lire avant toute modification. Dernière mise à jour : 12 novembre 202
 2. **Ne jamais retoucher un fichier généré à la main.** Les PDF et JPEG de l'affiche se régénèrent depuis `affiche/affiche.html` (voir plus bas).
 3. **Ne toucher qu'à ce dépôt.** Le compte GitHub héberge aussi les projets de Marion (`epicerie_radonnaise`), `reflecxo` et celui de Gina : ne jamais y toucher depuis ce projet.
 4. **Aucune mise en ligne sans le « Go » d'Eric.** Montrer un aperçu d'abord.
+6. **Numéro de version** : il est affiché en bas du site (`<p class="site-version">`). Le changer à chaque mise en ligne, avec une entrée dans `NOTES-DE-VERSION.md`.
+7. **Tant que la photo du verger vient d'Unsplash**, garder la mention « Photo d'illustration » sur le site et sur l'affiche : le titre dit « le verger de Fougerolles » alors que la photo n'en est pas un.
 5. **Vérifier chaque rendu à l'œil** (capture d'écran ou PDF converti en image) avant de livrer : chevauchements, textes coupés, QR lisible.
 
 ## Contenu du dépôt
