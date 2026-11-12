@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<title>Affiche Kirsch – Ferme Tisserand (photo)</title>
+<style>
+@font-face{font-family:"Abril";src:url(fonts/abril-fatface-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:normal;src:url(fonts/gelasio-latin-400-normal.woff2)}
+@font-face{font-family:"Gelasio";font-weight:400;font-style:italic;src:url(fonts/gelasio-latin-400-italic.woff2)}
+@font-face{font-family:"Gelasio";font-weight:600;font-style:italic;src:url(fonts/gelasio-latin-600-italic.woff2)}
+@font-face{font-family:"Arimo";font-weight:400;src:url(fonts/arimo-latin-400-normal.woff2)}
+@font-face{font-family:"Arimo";font-weight:700;src:url(fonts/arimo-latin-700-normal.woff2)}
+@font-face{font-family:"Vibes";src:url(fonts/great-vibes-latin-400-normal.woff2)}
+@page{size:__W__mm __H__mm;margin:0}
+:root{--u:__U__mm;--red:#c8102e;--cream:#fff6e4;--honey:#ffd166}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:__W__mm;height:__H__mm;overflow:hidden;background:#c8102e}
+body{-webkit-print-color-adjust:exact;print-color-adjust:exact;font-family:Arimo,sans-serif}
+.poster{position:relative;width:100%;height:100%;overflow:hidden;background:url(img/verger_cerisiers.jpg) center 25%/cover no-repeat}
+.veil{position:absolute;inset:0;background:linear-gradient(rgba(255,246,228,.85) 0%,rgba(255,246,228,.6) 20%,rgba(255,246,228,0) 36%)}
+.t{position:absolute;left:0;right:0;text-align:center}
+.h1{top:calc(var(--u)*11);font:italic 600 calc(var(--u)*11)/1 Gelasio,serif;color:var(--red)}
+.h2{top:calc(var(--u)*23);font:400 calc(var(--u)*33)/1 Abril,serif;color:var(--red)}
+.h3{top:calc(var(--u)*54);font:400 calc(var(--u)*33)/1.2 Vibes,cursive;color:var(--red)}
+.h3 small{font-size:.55em;margin-right:.15em}
+.cta{top:calc(var(--u)*101);transform:rotate(-4deg)}.cta span{display:inline-block;background:#fff;color:var(--red);font:italic 600 calc(var(--u)*10.5)/1 Gelasio,serif;padding:calc(var(--u)*2.8) calc(var(--u)*7) calc(var(--u)*3.4);border-radius:calc(var(--u)*10)}
+.seal{position:absolute;left:50%;top:calc(var(--u)*124);width:calc(var(--u)*90);height:calc(var(--u)*90);margin-left:calc(var(--u)*-45);border-radius:50%;background:var(--red);border:calc(var(--u)*2.2) solid #fff;display:flex;align-items:center;justify-content:center;transform:rotate(-5deg)}
+.seal .arc{position:absolute;inset:0;width:100%;height:100%}
+.seal .arc text{font:700 5.6px Arimo;fill:#fff}
+.seal .qr{width:calc(var(--u)*51);height:calc(var(--u)*51);background:#fff;padding:calc(var(--u)*3);border-radius:calc(var(--u)*2.5)}
+.seal .qr svg{width:100%;height:100%;display:block}
+.bg{position:absolute;inset:0;width:100%;height:100%}
+.brand{position:absolute;left:0;right:0;top:calc(var(--u)*231);display:flex;align-items:center;justify-content:center;gap:calc(var(--u)*4);color:var(--cream)}
+.brand img{height:calc(var(--u)*28);width:auto}
+.brand div{font:400 calc(var(--u)*13)/1 Abril,serif}
+.brand i{display:block;font:italic 600 calc(var(--u)*8)/1 Gelasio,serif;margin-bottom:calc(var(--u)*1)}
+.gamme{top:calc(var(--u)*262.5);font:italic 600 calc(var(--u)*7.6)/1.15 Gelasio,serif;color:#fff}
+.aoc{top:calc(var(--u)*274.5);font:italic 400 calc(var(--u)*4.6)/1 Gelasio,serif;color:var(--honey)}
+.health{position:absolute;left:calc(var(--u)*10);right:calc(var(--u)*10);bottom:calc(var(--u)*3.5);background:var(--cream);color:#7a0c1e;text-align:center;font:700 calc(var(--u)*4.3)/1.2 Arimo;padding:calc(var(--u)*1.6);border-radius:calc(var(--u)*1)}
+</style></head><body><div class="poster"><div class="veil"></div>
+<div class="t h1">Avant la bouteille, il y a</div>
+<div class="t h2">le verger</div>
+<div class="t h3"><small>de</small>Fougerolles</div>
+<div class="t cta"><span>Scannez, découvrez la gamme !</span></div>
+<div class="seal"><svg class="arc" viewBox="0 0 100 100"><defs><path id="c" d="M50,50 m-42.5,0 a42.5,42.5 0 1,1 85,0 a42.5,42.5 0 1,1 -85,0"/></defs><text><textPath href="#c" textLength="262" lengthAdjust="spacing">SCANNEZ-MOI ! • TOUTE LA GAMME • SCANNEZ-MOI ! • TOUTE LA GAMME •</textPath></text></svg><div class="qr">__QR__</div></div>
+<svg class="bg" viewBox="0 0 210 297" preserveAspectRatio="none"><path d="M0 233 C9 231 15 224 27 223 C39 222 45 229 57 229 C69 229 77 219 91 218 C105 217 113 227 125 227 C135 227 143 222 153 221 C167 220 173 229 187 228 C197 227 204 224 210 223 L210 320 L0 320Z" fill="#c8102e"/><path d="M0 233 C9 231 15 224 27 223 C39 222 45 229 57 229 C69 229 77 219 91 218 C105 217 113 227 125 227 C135 227 143 222 153 221 C167 220 173 229 187 228 C197 227 204 224 210 223" fill="none" stroke="#ffd166" stroke-width=".8"/></svg>
+<div class="brand"><img src="img/embleme_creme_compact.png" alt=""><div><i>La ferme</i>Tisserand</div></div>
+<div class="t gamme">Kirsch AOC · Mirabelle · Poire Williams<br>Prune · Liqueurs · Apéritifs</div>
+<div class="health">L’abus d’alcool est dangereux pour la santé, à consommer avec modération.</div>
+</div></body></html>
