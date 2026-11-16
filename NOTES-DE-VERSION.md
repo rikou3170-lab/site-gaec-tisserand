@@ -4,6 +4,11 @@ La version la plus récente est en haut. Chaque ligne correspond à une mise en 
 
 ## 16 novembre 2026
 
+### Version 3.3 — bouteilles Cœur détourées (22 h 03)
+- Chaque bouteille Cœur est détourée (fond retiré), redressée et posée sur le cadre coloré du site.
+- Source : `photos-originales/coeurs-photo-brute-entiere.jpg` ; découpes prêtes à réutiliser dans `photos-originales/coeurs-detourees/`.
+- Méthode : détourage avec `rembg` (modèle isnet-general-use), nettoyage manuel du contour de la Mirabelle, rotation d'environ 6° pour la Poire et la Mirabelle.
+
 ### Version 3.2 — nouvelles photos des liqueurs Cœur (21 h 55)
 - Photo des trois bouteilles (fond rideau rouge) ajoutée en tête de la collection.
 - Chaque bouteille Cœur remplacée par une découpe de cette photo : bouteilles entières, étiquettes lisibles.
