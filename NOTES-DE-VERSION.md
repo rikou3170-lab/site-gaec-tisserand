@@ -2,6 +2,13 @@
 
 La version la plus récente est en haut. Chaque ligne correspond à une mise en ligne ou à une sauvegarde sur GitHub.
 
+## 16 novembre 2026
+
+### Version 3.2 — nouvelles photos des liqueurs Cœur (21 h 55)
+- Photo des trois bouteilles (fond rideau rouge) ajoutée en tête de la collection.
+- Chaque bouteille Cœur remplacée par une découpe de cette photo : bouteilles entières, étiquettes lisibles.
+- Sources : `photos-originales/coeurs-trois-bouteilles.jpg` (utilisée) et `coeurs-photo-brute.jpg` (non utilisée : bouchons coupés).
+
 ## 12 novembre 2026
 
 ### Version 3.1 — version affichée et mentions sur la photo (19 h)
